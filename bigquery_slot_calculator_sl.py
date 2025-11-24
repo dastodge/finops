@@ -1,5 +1,11 @@
 # BiqQuery Slot Calculator for Continuous Queries
+
 # Requires Python & Streamlit - https://docs.streamlit.io/get-started/installation/command-line
+# App Deployed here: https://jons-slot-calc.streamlit.app/
+
+# Slots Needed ≈ (Rows per second × Avg bytes per row​) / (Throughput per slot) × Buffer
+# Throughput per slot varies by query complexity
+
 
 import streamlit as st
 
