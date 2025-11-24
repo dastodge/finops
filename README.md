@@ -1,2 +1,2 @@
-# ee-finops
-EE Finops work
+# finops
+Finops work
