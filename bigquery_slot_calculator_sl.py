@@ -1,3 +1,5 @@
+# BiqQuery Slot Calculator for Continuous Queries
+# Requires Python & Streamlit - https://docs.streamlit.io/get-started/installation/command-line
 
 import streamlit as st
 
@@ -27,7 +29,7 @@ def calculate_slots(rows_per_sec, avg_row_size_bytes, complexity_level, latency_
 st.title("BigQuery Slot Sizing Calculator")
 st.write("Estimate the number of slots needed for streaming workloads with Continuous Queries.")
 
-rows_per_sec = st.slider("Rows per second", min_value=1000, max_value=100000, value=50000, step=1000)
+rows_per_sec = st.slider("Rows per second", min_value=500, max_value=100000, value=50000, step=1000)
 avg_row_size_bytes = st.slider("Average row size (bytes)", min_value=100, max_value=2000, value=500, step=50)
 complexity_level = st.selectbox("Query complexity", ["simple", "moderate", "complex"])
 latency_target_sec = st.slider("Latency target (seconds)", min_value=1, max_value=60, value=5)
