@@ -1,2 +1,3 @@
-# finops
-Finops work
+# GCP 
+
+Random GCP related code
