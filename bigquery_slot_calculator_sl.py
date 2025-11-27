@@ -6,7 +6,6 @@
 # Slots Needed ≈ (Rows per second × Avg bytes per row​) / (Throughput per slot) × Buffer
 # Throughput per slot varies by query complexity
 
-
 import streamlit as st
 
 def calculate_slots(rows_per_sec, avg_row_size_bytes, complexity_level, latency_target_sec):
@@ -35,7 +34,7 @@ def calculate_slots(rows_per_sec, avg_row_size_bytes, complexity_level, latency_
 st.title("BigQuery Slot Sizing Calculator")
 st.write("Estimate the number of slots needed for streaming workloads with Continuous Queries.")
 
-rows_per_sec = st.slider("Rows per second", min_value=500, max_value=100000, value=50000, step=1000)
+rows_per_sec = st.slider("Rows per second", min_value=500, max_value=100000, value=50000, step=500)
 avg_row_size_bytes = st.slider("Average row size (bytes)", min_value=100, max_value=2000, value=500, step=50)
 complexity_level = st.selectbox("Query complexity", ["simple", "moderate", "complex"])
 latency_target_sec = st.slider("Latency target (seconds)", min_value=1, max_value=60, value=5)
